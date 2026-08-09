@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Zdybanka.API/Zdybanka.API.csproj" />
+  <Project Path="Zdybanka.Application/Zdybanka.Application.csproj" />
+  <Project Path="Zdybanka.Core/Zdybanka.Core.csproj" />
+  <Project Path="Zdybanka.Data/Zdybanka.Data.csproj" />
+</Solution>
