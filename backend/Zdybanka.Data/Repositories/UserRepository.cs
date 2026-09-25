@@ -23,19 +23,21 @@ public class UserRepository : IUserRepository
         return _context.Users.ToListAsync();
     }
 
-    public ValueTask<EntityEntry<User>> AddUserAsync(User user)
+    public async Task<User> AddUserAsync(User user)
     {
-        return _context.Users.AddAsync(user);
+        EntityEntry<User> entry = await _context.Users.AddAsync(user);
+
+        return entry.Entity;
     }
 
-    public EntityEntry<User> RemoveUser(User user)
+    public void RemoveUser(User user)
     {
-        return _context.Users.Remove(user);
+        _context.Users.Remove(user);
     }
 
-    public EntityEntry<User> UpdateUser(User user)
+    public void UpdateUser(User user)
     {
-        return _context.Users.Update(user);
+        _context.Users.Update(user);
     }
 
     public Task<int> SaveChangesAsync()

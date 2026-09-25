@@ -3,4 +3,5 @@
   <Project Path="Zdybanka.Application/Zdybanka.Application.csproj" />
   <Project Path="Zdybanka.Core/Zdybanka.Core.csproj" />
   <Project Path="Zdybanka.Data/Zdybanka.Data.csproj" />
+  <Project Path="Zdybanka.Infrastructure/Zdybanka.Infrastructure.csproj" />
 </Solution>

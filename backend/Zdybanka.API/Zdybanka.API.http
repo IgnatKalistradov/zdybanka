@@ -1,6 +1,6 @@
-@Zdybanka.API_HostAddress = http://localhost:5071
+@API_HostAddress = http://localhost:5071
 
-GET {{Zdybanka.API_HostAddress}}/weatherforecast/
+GET {{API_HostAddress}}/api/Tag
 Accept: application/json
 
 ###

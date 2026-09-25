@@ -1,6 +1,9 @@
 
 using Microsoft.EntityFrameworkCore;
+using Zdybanka.Application.Services;
 using Zdybanka.Data;
+using Zdybanka.Data.Repositories;
+using Zdybanka.Infrastructure;
 
 namespace Zdybanka.API;
 
@@ -14,6 +17,20 @@ public class Program
         builder.Services.AddDbContext<ZdybankaContext>(options =>
         {
             options.UseNpgsql(connectionString: builder.Configuration.GetConnectionString("ConnectionString"), x => x.UseNetTopologySuite());
+        });
+
+        builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
+        builder.Services.AddScoped<UserService>();
+        builder.Services.AddScoped<TagService>();
+        builder.Services.AddScoped<IUserRepository, UserRepository>();
+        builder.Services.AddScoped<ITagRepository, TagRepository>();
+
+        builder.Services.AddCors(options =>
+        {
+            options.AddDefaultPolicy(policy =>
+            {
+                policy.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
+            });
         });
 
         builder.Services.AddControllers();
@@ -31,6 +48,8 @@ public class Program
         app.UseHttpsRedirection();
 
         app.UseAuthorization();
+
+        app.UseCors();
 
 
         app.MapControllers();

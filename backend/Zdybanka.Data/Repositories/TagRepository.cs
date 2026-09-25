@@ -8,7 +8,7 @@ public class TagRepository(ZdybankaContext context) : ITagRepository
 {
     private ZdybankaContext _context = context;
 
-    public Task<List<Tag>> GetTags()
+    public Task<List<Tag>> GetTagsAsync()
     {
         return _context.Tags.ToListAsync();
     }
@@ -18,19 +18,21 @@ public class TagRepository(ZdybankaContext context) : ITagRepository
         return _context.Tags.FirstAsync(t => t.Id == id);
     }
 
-    public ValueTask<EntityEntry<Tag>> AddTagAsync(Tag tag)
+    public async Task<Tag> AddTagAsync(Tag tag)
     {
-        return _context.Tags.AddAsync(tag);
+        EntityEntry<Tag> entry = await _context.Tags.AddAsync(tag);
+
+        return entry.Entity;
     }
 
-    public EntityEntry<Tag> RemoveTag(Tag tag)
+    public void RemoveTag(Tag tag)
     {
-        return _context.Tags.Remove(tag);
+        _context.Tags.Remove(tag);
     }
 
-    public EntityEntry<Tag> UpdateTag(Tag tag)
+    public Tag UpdateTag(Tag tag)
     {
-        return _context.Tags.Update(tag);
+        return _context.Tags.Update(tag).Entity;
     }
 
     public Task<int> SaveChangesAsync()

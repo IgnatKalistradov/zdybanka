@@ -13,7 +13,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Zdybanka.Application\Zdybanka.Application.csproj" />
     <ProjectReference Include="..\Zdybanka.Data\Zdybanka.Data.csproj" />
+    <ProjectReference Include="..\Zdybanka.Infrastructure\Zdybanka.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

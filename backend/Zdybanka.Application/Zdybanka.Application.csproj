@@ -1,5 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
+  <ItemGroup>
+    <ProjectReference Include="..\Zdybanka.Data\Zdybanka.Data.csproj" />
+    <ProjectReference Include="..\Zdybanka.Core\Zdybanka.Core.csproj" />
+    <ProjectReference Include="..\Zdybanka.Infrastructure\Zdybanka.Infrastructure.csproj" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
