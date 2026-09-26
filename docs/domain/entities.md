@@ -9,19 +9,13 @@
 ## User
 
 * User
-* Role
 
 ## Event
 
 * Event
-* Event creator
-* Event participant
-* Event location
-* Event chat
-* Event tags
+* Tag
 
 ## Chat
 
 * Chat
 * Message
-* Chat member
