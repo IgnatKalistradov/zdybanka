@@ -2,17 +2,17 @@
 
 # Зміст
 
-1. [WEEK 1 — Foundation & Business Documentation](#week-1)
-2. [WEEK 2 — DDD, Architecture & Backend Foundation](#week-2)
-3. [WEEK 3 — API Contract & Events CRUD](#week-3)
-4. [WEEK 4 — Authentication & Users](#week-4)
-5. [WEEK 5 — Event Participation, Geo & Resilience](#week-5)
-6. [WEEK 6 — Map, Chat & Realtime](#week-6)
-7. [WEEK 7 — Testing & Quality](#week-7)
-8. [WEEK 8 — Docker & CI/CD](#week-8)
-9. [WEEK 9 — Observability & Kubernetes Architecture](#week-9)
-10. [WEEK 10 — Kubernetes Deployment & Final Stabilization](#week-10)
-11. [Загальна послідовність](#загальна-послідовність)
+* [WEEK 1 — Foundation & Business Documentation](#week-1)
+* [WEEK 2 — DDD, Architecture & Backend Foundation](#week-2)
+* [WEEK 3 — API Contract & Events CRUD](#week-3)
+* [WEEK 4 — Authentication & Users](#week-4)
+* [WEEK 5 — Event Participation, Geo & Resilience](#week-5)
+* [WEEK 6 — Map, Chat & Realtime](#week-6)
+* [WEEK 7 — Testing & Quality](#week-7)
+* [WEEK 8 — Docker & CI/CD](#week-8)
+* [WEEK 9 — Observability & Kubernetes Architecture](#week-9)
+* [WEEK 10 — Kubernetes Deployment & Final Stabilization](#week-10)
+* [Загальна послідовність](#загальна-послідовність)
 
 
 ## WEEK 1
